@@ -2,20 +2,36 @@ buildscript {
     repositories {
         mavenLocal()
         maven { url "https://repo.grails.org/grails/core" }
+        maven {
+            name = 'wf-repo'
+            url = 'https://repo.webbfontaine.com/nexus/content/groups/public'
+            credentials {
+                username "$wfRepoUsername"
+                password "$wfRepoPassword"
+            }
+        }
     }
     dependencies {
         classpath "org.grails:grails-gradle-plugin:$grailsVersion"
         classpath "org.grails.plugins:hibernate5:6.0.0"
+        classpath 'com.webbfontaine.gradle.plugins:publish:1.0.10'
     }
 }
 
-version "0.1"
+version "0.1-SNAPSHOT"
 group "grails.plugins.sequence"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
 apply plugin:"org.grails.grails-plugin"
+apply plugin: 'com.webbfontaine.gradle.plugins.publish'
 apply plugin:"org.grails.grails-plugin-publish"
+
+
+wfPublish{
+    type='THIRDPARTY'
+}
+
 
 repositories {
     mavenLocal()
@@ -50,18 +66,3 @@ dependencies {
 task wrapper(type: Wrapper) {
     gradleVersion = gradleWrapperVersion
 }
-grailsPublish {
-    // TODO: Provide values here
-    user = 'user'
-    key = 'key'
-    githubSlug = 'foo/bar'
-    license {
-        name = 'Apache-2.0'
-    }
-    title = "My Plugin"
-    desc = "Full plugin description"
-    developers = [johndoe:"John Doe"]
-    portalUser = ""
-    portalPassword = ""
-}
-
