@@ -23,6 +23,7 @@ group "grails.plugins.sequence"
 
 apply plugin:"eclipse"
 apply plugin:"idea"
+apply plugin:"com.webbfontaine.gradle.plugins.repository"
 apply plugin:"org.grails.grails-plugin"
 apply plugin: 'com.webbfontaine.gradle.plugins.publish'
 apply plugin:"org.grails.grails-plugin-publish"
