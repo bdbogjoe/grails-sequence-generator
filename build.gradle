@@ -18,7 +18,7 @@ buildscript {
     }
 }
 
-version "0.1-SNAPSHOT"
+version "1.0-SNAPSHOT"
 group "grails.plugins.sequence"
 
 apply plugin:"eclipse"
