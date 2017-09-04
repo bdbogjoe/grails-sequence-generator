@@ -46,7 +46,9 @@ class SequenceDefinition implements MultiTenant {
 
         //cache true
         group column: 'sequence_group'
+        increment column:'sequence_increment'
     }
+
 
     transient SequenceNumber getOneNumber() {
         numbers.find { it }
