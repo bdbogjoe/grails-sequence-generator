@@ -26,7 +26,6 @@ class SequenceNumber {
     static belongsTo = [definition: SequenceDefinition]
 
     static mapping = {
-        datasource 'ALL'
         number column:'sequence_number'
     }
 

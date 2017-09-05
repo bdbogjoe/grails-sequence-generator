@@ -24,7 +24,7 @@ import org.gr8crm.sequence.SequenceStatus
 /**
  * Domain class for persisting sequence definitions.
  */
-class SequenceDefinition implements MultiTenant {
+class SequenceDefinition {
     Long tenantId
     String app
     String name
@@ -42,8 +42,6 @@ class SequenceDefinition implements MultiTenant {
     }
     static transients = ['oneNumber']
     static mapping = {
-        datasource 'ALL'
-
         //cache true
         group column: 'sequence_group'
         start column: 'sequence_start'
