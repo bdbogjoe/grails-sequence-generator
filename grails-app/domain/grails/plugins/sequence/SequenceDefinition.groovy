@@ -24,7 +24,7 @@ import org.gr8crm.sequence.SequenceStatus
 /**
  * Domain class for persisting sequence definitions.
  */
-class SequenceDefinition {
+class SequenceDefinition implements MultiTenant{
     Long tenantId
     String app
     String name

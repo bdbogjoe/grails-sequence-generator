@@ -18,7 +18,7 @@ buildscript {
     }
 }
 
-version "1.0-SNAPSHOT"
+version "1.0-WF"
 group "grails.plugins.sequence"
 
 apply plugin:"eclipse"
@@ -41,7 +41,7 @@ repositories {
 
 
 dependencies {
-    compile "org.gr8crm.sequence:sequence-generator-starter:0.0.1-SNAPSHOT"
+    compile "org.gr8crm.sequence:sequence-generator-starter:0.0.1-WF"
     compile "org.springframework.boot:spring-boot-starter-logging"
     compile "org.springframework.boot:spring-boot-autoconfigure"
     compile "org.grails:grails-core"
