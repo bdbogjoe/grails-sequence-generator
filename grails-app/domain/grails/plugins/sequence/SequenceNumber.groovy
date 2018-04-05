@@ -19,13 +19,14 @@ package grails.plugins.sequence
 /**
  * Domain class that holds the next available sequence number for a specific sequence definition.
  */
-class SequenceNumber {
+class SequenceNumber  {
 
     Long number
 
     static belongsTo = [definition: SequenceDefinition]
 
     static mapping = {
+        datasource 'ALL'
         number column:'sequence_number'
     }
 

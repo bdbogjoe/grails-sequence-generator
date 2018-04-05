@@ -42,6 +42,7 @@ class SequenceDefinition implements MultiTenant{
     }
     static transients = ['oneNumber']
     static mapping = {
+        datasource 'ALL'
         //cache true
         group column: 'sequence_group'
         start column: 'sequence_start'
