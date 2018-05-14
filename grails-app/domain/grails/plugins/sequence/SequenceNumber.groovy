@@ -28,6 +28,7 @@ class SequenceNumber  {
     static mapping = {
         datasource 'ALL'
         number column:'sequence_number'
+            autowire true
     }
 
     @Override

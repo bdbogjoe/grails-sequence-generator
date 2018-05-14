@@ -16,6 +16,7 @@
 
 package grails.plugins.sequence
 
+import grails.gorm.transactions.Transactional
 import org.springframework.stereotype.Component
 
 import static grails.gorm.multitenancy.Tenants.withId
@@ -25,6 +26,7 @@ import static grails.gorm.multitenancy.Tenants.withoutId
  * A repository responsible for loading and saving sequences from database.
  */
 @Component
+@Transactional
 class GormSequenceRepository {
 
     SequenceDefinition createDefinition(final String app, final long tenant, final String name, final String group,
@@ -47,8 +49,9 @@ class GormSequenceRepository {
                 } else {
                     isNull('group');
                 }
-            }
-        } as SequenceDefinition
+            } as SequenceDefinition
+        }
+
     }
 
     List<SequenceDefinition> getDefinitions(final String app, final Long tenant) {
