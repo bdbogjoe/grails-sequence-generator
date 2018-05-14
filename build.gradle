@@ -4,7 +4,7 @@ buildscript {
         maven { url "https://repo.grails.org/grails/core" }
         maven {
             name = 'wf-repo'
-            url = 'https://repo.webbfontaine.com/nexus/content/groups/public'
+            url = 'https://repo.webbfontaine.com/nexus/repository/public'
             credentials {
                 username "$wfRepoUsername"
                 password "$wfRepoPassword"
