@@ -18,7 +18,7 @@ buildscript {
     }
 }
 
-version "3.3.1.0-WF-RC"
+version "3.3.1.0-WF-RC1"
 group "grails.plugins.sequence"
 
 apply plugin:"eclipse"
